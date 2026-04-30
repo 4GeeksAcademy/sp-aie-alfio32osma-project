@@ -254,6 +254,89 @@
         </div>
       </section>
 
+      <section id="laboratorio-pruebas" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" aria-labelledby="laboratorio-title">
+        <div class="rounded-3xl border border-slate-800 bg-slate-900/70 p-8">
+          <div class="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p class="inline-flex rounded-full border border-orange-300/30 bg-orange-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-orange-300">
+                Frontend / Pruebas
+              </p>
+              <h2 id="laboratorio-title" class="mt-3 text-3xl font-extrabold text-white sm:text-4xl">
+                Laboratorio manual de operaciones
+              </h2>
+              <p class="mt-3 max-w-3xl text-slate-300">
+                Ejecuta filtros, búsquedas, ordenamientos y reportes directamente desde esta interfaz para validar el comportamiento de las funciones clave.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid gap-6 lg:grid-cols-2">
+            <article class="rounded-2xl border border-slate-700 bg-slate-950/60 p-5">
+              <h3 class="text-lg font-bold text-white">Filtrar menú por categoría</h3>
+              <div class="mt-4 flex flex-wrap items-center gap-3">
+                <label for="op-filter-category" class="text-sm font-medium text-slate-300">Categoría</label>
+                <select id="op-filter-category" class="rounded-lg border border-slate-600 bg-slate-900 px-3 py-2 text-sm text-slate-100 focus:border-orange-300 focus:outline-none">
+                  <option value="Meat">Meat</option>
+                  <option value="Side">Side</option>
+                  <option value="Beverage">Beverage</option>
+                  <option value="Dessert">Dessert</option>
+                  <option value="Combo">Combo</option>
+                </select>
+                <button id="btn-filter-category" type="button" class="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-orange-400">
+                  Ejecutar filtro
+                </button>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-slate-700 bg-slate-950/60 p-5">
+              <h3 class="text-lg font-bold text-white">Buscar ítem de menú por nombre</h3>
+              <div class="mt-4 flex flex-wrap items-center gap-3">
+                <label for="op-search-term" class="text-sm font-medium text-slate-300">Nombre</label>
+                <input id="op-search-term" type="text" value="Brasa Burger" class="min-w-[210px] rounded-lg border border-slate-600 bg-slate-900 px-3 py-2 text-sm text-slate-100 placeholder:text-slate-400 focus:border-orange-300 focus:outline-none" placeholder="Ejemplo: Brasa Burger" />
+                <button id="btn-search-item" type="button" class="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-orange-400">
+                  Ejecutar búsqueda
+                </button>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-slate-700 bg-slate-950/60 p-5">
+              <h3 class="text-lg font-bold text-white">Ordenar datos</h3>
+              <div class="mt-4 flex flex-wrap items-center gap-3">
+                <label for="op-sort-target" class="text-sm font-medium text-slate-300">Conjunto</label>
+                <select id="op-sort-target" class="rounded-lg border border-slate-600 bg-slate-900 px-3 py-2 text-sm text-slate-100 focus:border-orange-300 focus:outline-none">
+                  <option value="locations-capacity">Ubicaciones por capacidad</option>
+                  <option value="menu-price-cop">Menú por precio COP</option>
+                </select>
+
+                <label for="op-sort-order" class="text-sm font-medium text-slate-300">Orden</label>
+                <select id="op-sort-order" class="rounded-lg border border-slate-600 bg-slate-900 px-3 py-2 text-sm text-slate-100 focus:border-orange-300 focus:outline-none">
+                  <option value="asc">Ascendente</option>
+                  <option value="desc">Descendente</option>
+                </select>
+
+                <button id="btn-sort" type="button" class="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-orange-400">
+                  Ejecutar ordenamiento
+                </button>
+              </div>
+            </article>
+
+            <article class="rounded-2xl border border-slate-700 bg-slate-950/60 p-5">
+              <h3 class="text-lg font-bold text-white">Generar reporte</h3>
+              <p class="mt-2 text-sm text-slate-300">Resumen de ingresos por país y top productos vendidos.</p>
+              <button id="btn-report" type="button" class="mt-4 rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-slate-950 transition hover:bg-orange-400">
+                Generar reporte
+              </button>
+            </article>
+          </div>
+
+          <section class="mt-8 rounded-2xl border border-slate-700 bg-slate-950/70 p-5" aria-live="polite" aria-atomic="true">
+            <h3 class="text-lg font-bold text-white">Resultados</h3>
+            <p id="lab-result-status" class="mt-2 text-sm text-orange-200">Selecciona una operación para ver resultados.</p>
+            <pre id="lab-result-output" class="mt-4 max-h-[420px] overflow-auto rounded-xl border border-slate-700 bg-slate-900 p-4 text-xs leading-relaxed text-slate-200"></pre>
+          </section>
+        </div>
+      </section>
+
       <section id="contacto" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" aria-labelledby="contacto-title">
         <div class="grid gap-8 rounded-3xl border border-slate-800 bg-slate-900/60 p-8 lg:grid-cols-2">
           <div>
@@ -318,5 +401,6 @@
     </footer>
 
     <script src="validation.js" defer></script>
+    <script src="manual-tests.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,21 @@
+{
+  "name": "@repo/shared-types",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Shared types for AI Engineering transversal projects",
+  "main": "index.ts",
+  "types": "index.ts",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "validate": "npm run typecheck"
+  },
+  "keywords": [
+    "types",
+    "shared"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^6.0.3"
+  }
+}

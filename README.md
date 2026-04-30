@@ -60,6 +60,22 @@ ai-engineering-company-project-template/
 
 ---
 
+## TypeScript Validation (development)
+
+This repository includes a clear local command to validate TypeScript during development:
+
+```bash
+npm run typecheck
+```
+
+Direct equivalent command:
+
+```bash
+npx tsc --noEmit
+```
+
+---
+
 ## Milestones (reference)
 
 | Milestone | Focus        | Typical deliverables                        |
