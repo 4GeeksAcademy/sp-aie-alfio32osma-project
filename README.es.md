@@ -60,6 +60,22 @@ ai-engineering-company-project-template/
 
 ---
 
+## Validación TypeScript (desarrollo)
+
+Este repositorio incluye un comando claro para validar tipos en local durante el desarrollo:
+
+```bash
+npm run typecheck
+```
+
+Comando equivalente directo:
+
+```bash
+npx tsc --noEmit
+```
+
+---
+
 ## Hitos (referencia)
 
 | Hito | Enfoque       | Entregables típicos                              |
